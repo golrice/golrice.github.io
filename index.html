@@ -11,15 +11,18 @@
 <body>
     <div class="todo-container">
         <div class="todo-header">
-            <h1>My TodoList</h1>
+            <h1>TodoList</h1>
+        </div>
+        <div class="todo-actions">
+            <button onclick="clearTodos()">Clear All</button>
         </div>
         <div class="todo-input">
-            <input type="text" id="todoInput" placeholder="Add new todo...">
+            <input type="text" id="todoInput" placeholder="Add new todo..." onkeypress="addTodoOnEnter(event)">
             <button onclick="addTodo()">Add Todo</button>
         </div>
-        <div class="todo-list" id="todoList">
+        <ul class="todo-list" id="todoList">
             <!-- Todo items will be added here -->
-        </div>
+        </ul>
         <div class="todo-footer">
             <p>Double click to edit a todo item</p>
         </div>
